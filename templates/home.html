@@ -2,6 +2,7 @@
 <html>
   <title>ByteBot</title>
   <head>
+    <link rel="stylesheet" href="/static/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <style>
       body {
@@ -100,7 +101,6 @@
     </style>
   </head>
   <body>
-    <img />
     <center>
       <h1>
         Your Personal ChatBot
@@ -116,6 +116,7 @@
         </div>
         <div id="userInput">
           <input id="textInput" type="text" name="msg" placeholder="Message" />
+          <input id = "buttonInput" type="submit" value="Send" />
         </div>
       </div>
       <script>
@@ -139,6 +140,9 @@
           if (e.which == 13) {
             getBotResponse();
           }
+        });
+        $("#buttonInput").click(function() {
+          getBotResponse();
         });
       </script>
     </div>
